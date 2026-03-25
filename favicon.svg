@@ -1,0 +1,36 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#001a4d;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1a0a4d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4d1a8d;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background with gradient -->
+  <rect width="256" height="256" fill="url(#bgGradient)"/>
+  
+  <!-- PS Logo -->
+  <g transform="translate(128, 128)">
+    <!-- P Letter (left side, white) -->
+    <path d="M -50 -55 L -50 55 L -10 55 L -10 -5 L 20 -5 Q 45 -5 45 -28 Q 45 -50 20 -50 L -50 -50 Z" 
+          fill="none" stroke="white" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+    
+    <!-- S Letter (right side, white) -->
+    <path d="M 10 -55 Q 50 -55 50 -35 Q 50 -18 10 -8 Q 55 0 55 25 Q 55 55 10 55 Q 10 55 10 55" 
+          fill="none" stroke="white" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+    
+    <!-- PRANIL text (vertical on left) -->
+    <text x="-65" y="-15" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white" writing-mode="tb" text-anchor="middle" letter-spacing="2">
+      PRANIL
+    </text>
+    
+    <!-- SAKPAL text (curved on right) -->
+    <path id="textCurve" d="M 65 -45 Q 95 -30 95 30" fill="none"/>
+    <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" letter-spacing="2.5">
+      <textPath href="#textCurve" startOffset="50%" text-anchor="middle">
+        SAKPAL
+      </textPath>
+    </text>
+  </g>
+</svg>
