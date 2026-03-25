@@ -213,6 +213,46 @@ function initPageLoadAnimation() {
   });
 }
 
+function initMobileMenu() {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const headerNav = document.querySelector('.header-nav');
+
+  if (!menuToggle || !headerNav) return;
+
+  const closeMenu = () => {
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.setAttribute('aria-label', 'Open navigation menu');
+    headerNav.classList.remove('is-open');
+  };
+
+  const openMenu = () => {
+    menuToggle.setAttribute('aria-expanded', 'true');
+    menuToggle.setAttribute('aria-label', 'Close navigation menu');
+    headerNav.classList.add('is-open');
+  };
+
+  menuToggle.addEventListener('click', () => {
+    const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+    if (isOpen) {
+      closeMenu();
+      return;
+    }
+    openMenu();
+  });
+
+  headerNav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      closeMenu();
+    });
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) {
+      closeMenu();
+    }
+  });
+}
+
 // ============================================
 // 9. INITIALIZE ALL FEATURES
 // ============================================
@@ -229,6 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLazyLoading();
   initFormValidation();
   initScrollToTop();
+  initMobileMenu();
 });
 
 // ============================================
