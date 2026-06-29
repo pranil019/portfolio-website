@@ -324,6 +324,7 @@ a{color:var(--accent-purple)}
 .project-card[data-project="4"]{background:linear-gradient(135deg,rgba(255,200,100,0.12),rgba(255,150,120,0.08))}
 .project-card[data-project="5"]{background:linear-gradient(135deg,rgba(200,150,255,0.12),rgba(150,150,255,0.08))}
 .project-card[data-project="6"]{background:linear-gradient(135deg,rgba(100,220,200,0.12),rgba(150,220,200,0.08))}
+.project-card[data-project="9"]{background:linear-gradient(135deg,rgba(255,175,120,0.12),rgba(255,220,120,0.08))}
 .project-card[data-project="2-end"]{background:linear-gradient(135deg,rgba(255,150,100,0.12),rgba(255,120,200,0.08))}
 .project-tags{display:inline-block;font-size:11px;margin-top:6px;color:rgba(255,255,255,0.6);background:rgba(255,212,0,0.1);padding:4px 8px;border-radius:4px;border:1px solid rgba(255,212,0,0.3)}
 .project-desc{margin:12px 0;color:var(--muted);font-size:14px;line-height:1.5;flex-grow:1}
